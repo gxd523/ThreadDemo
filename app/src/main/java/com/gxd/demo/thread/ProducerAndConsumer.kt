@@ -2,6 +2,10 @@ package com.gxd.demo.thread
 
 import kotlin.concurrent.thread
 
+/**
+ * 生产、消费共用一把锁，不能同时进行
+ * 产品剩10个时，停止生产
+ */
 fun main() {
     val blockingQueue = BlockingQueue<Int>()
     thread(name = "Producer-1") {
